@@ -1,7 +1,6 @@
 const wolf = document.getElementById("wolf")
 const godrag = document.getElementById("godrag")
 
-//lompat
 function jump(){
 if (wolf.classList != "jump"){
 wolf.classList.add("jump")
@@ -12,11 +11,11 @@ wolf.classList.remove("jump")
 }}
 
 let nyawa = setInterval(function(){
-// posisi Y wolf
+//posisi Y wolf
 let wolfTop = parseInt(window.getComputedStyle(wolf).getPropertyValue("top"))
-// posisi X godrag
+//posisi X godrag
 let godragLeft = parseInt(window.getComputedStyle(godrag).getPropertyValue("left"))
-// sensor jika kena tabrakan
+//sensor jika kena tabrakan
 if(godragLeft < 160 && godragLeft > 0 && wolfTop >= 100){
 console.log("MATI ANDA!!!")
 // alert("Mati!!!")
