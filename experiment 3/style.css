@@ -14,7 +14,6 @@ body{
 .world{
     overflow: hidden;
     position: relative;
-    width: 100%;
 }
 
 .score{
@@ -37,8 +36,24 @@ body{
 }
 
 .ground{
+    --left: 0;
     position: absolute;
     width: 300%;
     bottom: 0;
     left: calc(var(--left) * 1%);
+}
+
+.wolf{
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.godrag{
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
 }
