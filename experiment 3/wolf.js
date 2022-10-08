@@ -1,16 +1,16 @@
 const wolfElem = document.querySelector("[data-wolf]")
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.015
-const WOLF_FRAME_COUNT = 7
-const FRAME_TIME = 500
+const WOLF_FRAME_COUNT = 6
+const FRAME_TIME = 90   
 
 let isJumping
 let wolfFrame
 let currentFrameTime
 export function setupWolf(){
     isJumping = false
-    wolfFrame = 2
-    currentFrameTime = 1
+    wolfFrame = 0
+    currentFrameTime = 0
 }
 
 export function updateWolf(delta, speedScale){
@@ -20,12 +20,12 @@ export function updateWolf(delta, speedScale){
 
 function handleRun(delta, speedScale){
     if(isJumping){
-        wolfElem.src = 'img/wolf5.png'
+        wolfElem.src = 'img/wolf-run-4.png'
         return
     }
     if(currentFrameTime >= FRAME_TIME){
         wolfFrame = (wolfFrame + 1) % WOLF_FRAME_COUNT
-        wolfElem.src = `img/wolf${wolfFrame}.png`
+        wolfElem.src = `img/wolf-run-${wolfFrame}.png`
         currentFrameTime -= FRAME_TIME
     }
     currentFrameTime += delta * speedScale
