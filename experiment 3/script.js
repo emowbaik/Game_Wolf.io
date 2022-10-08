@@ -15,6 +15,7 @@ document.addEventListener("keydown", handleStart, { once: true})
 
 let lastTime
 let speedScale
+let score
 function update(time){
     if(lastTime == null){
         lastTime = time
@@ -44,7 +45,8 @@ function updateScore(delta){
 
 function handleStart(){
     lastTime = null
-    speedScale = 
+    speedScale = 1
+    score = 0
     setupGround()
     setupWolf()
     startScreenElem.classList.add("hide")
