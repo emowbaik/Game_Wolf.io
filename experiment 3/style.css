@@ -17,10 +17,13 @@ body{
 }
 
 .score{
-    position: absolute;
+    /* position: absolute; */
     font-size: 3vmin;
-    right: 1vmin;
-    top: 1vmin;
+    /* right: 1vmin;
+    top: 1vmin; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* .highScore{
@@ -117,4 +120,24 @@ body{
     /* top: -100px; */
     border-radius: 0px;    
     background-image: url(/img/about.png);
+}
+
+.about {
+    background-color: gray;
+    padding: 0.5em 0.5em;
+    border-radius: 10em;
+    text-decoration: none;
+    color: black;
+    transition: 0.7s;
+}
+
+.about:hover {
+    color: white;
+    background-color: rgb(53, 52, 52);
+    transition: 0.7s;
+}
+
+.abt {
+    margin-left: 2em;
+    margin-top: 2em;
 }
