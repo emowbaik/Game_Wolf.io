@@ -23,6 +23,13 @@ body{
     top: 1vmin;
 }
 
+/* .highScore{
+    position: absolute;
+    font-size: 3vmin;
+    left: 1vmin;
+    top: 1vmin;
+} */
+
 .start-screen{
     position: absolute;
     font-size: 5vmin;

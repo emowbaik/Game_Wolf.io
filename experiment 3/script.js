@@ -8,6 +8,7 @@ const SPEED_SCALE_INCREASE = 0.00001
 
 const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
+// const highScoreElem = document.querySelector("[data-highScore]")
 const startScreenElem = document.querySelector("[data-start-screen]")
 
 setPixelToWorldScale()
@@ -17,6 +18,7 @@ document.addEventListener("keydown", handleStart, { once: true})
 let lastTime
 let speedScale
 let score
+// let highScore
 function update(time){
     if(lastTime == null){
         lastTime = time
@@ -30,6 +32,7 @@ function update(time){
     updateGodrag(delta, speedScale)
     updateSpeedScale(delta)
     updateScore(delta)
+    // updatehighScore(delta)
     if(checkLose()) return handleLose()
 
     lastTime = time
@@ -59,15 +62,37 @@ function updateScore(delta){
     scoreElem.textContent = Math.floor(score)
 }
 
+// function updatehighScore(delta){
+//     highScore += delta * 0.01
+//     highScoreElem.textContent = Math.floor(highScore)
+
+//     if (localStorage.getItem('updatehighScore')) {
+//         highScore = localStorage.getItem('updatehighScore');
+//       }
+  
+//     // if (score > highScore) {
+//     //     highScore = score;
+//     //     highScoreText.t = "Highscore: " + highScore;
+//     //   }
+// }
+
 
 function handleStart(){
     lastTime = null
     speedScale = 1
     score = 0
-    score = 0
+    // highScore = 0
+    // score = 0
     setupGround()
     setupWolf()
     setupGodrag()
+
+    // window.localStorage.setItem('highScore', highScore); 
+    // if (score > highScore) {
+    //     highScore = score;
+    //     highScoreElem.textContent = "Highscore: " + highScore;
+    //   }
+
     startScreenElem.classList.add("hide")
     window.requestAnimationFrame(update)
 }
