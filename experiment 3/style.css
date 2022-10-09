@@ -67,24 +67,54 @@ body{
 
 /* menu.html */
 .a1{
-    position: relative;
+    position: absolute;
     color: transparent;
-    left: 75px;
-    top: 50px;
+    right: 15vmin;
+    top: 18vmin;
 }
 
 .a2{
-    position: relative;
-    color: transparent;
+    position: absolute;
+    /* color: transparent; */
     left: 0px;
     top: 0px;
 }
 
 .menu{
     position: absolute;
-    width: 480px;
-    height: 240px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* bottom: 0; */
     /* border: 1px solid black; */
     background-image: url(/img/BGMenu.png);
     margin: auto;
+}
+
+#play{
+    position: absolute;
+    /* height: 114px; */
+    /* width: 141px; */
+    width: 20%;
+    height: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 90vmin;
+    top: 70vmin;
+    border-radius: 0px;    
+    background-image: url(/img/buttonPlay.png);
+}
+
+#about{
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* left: 5px; */
+    /* right: 10px; */
+    /* top: -100px; */
+    border-radius: 0px;    
+    background-image: url(/img/about.png);
 }
