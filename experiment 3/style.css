@@ -47,7 +47,7 @@ body{
     position: absolute;
     width: 300%;
     bottom: 0;
-    left: calc(var(--left) * 1%);
+    left: calc(var(--left) * 1%); /* posisi nilai property css */
 }
 
 .wolf{
@@ -55,12 +55,36 @@ body{
     position: absolute;
     left: 1%;
     height: 30%;
-    bottom: calc(var(--bottom) * 1%);
+    bottom: calc(var(--bottom) * 1%); /* posisi nilai property css */
 }
 
 .godrag{
     position: absolute;
-    left: calc(var(--left) * 1%);
+    left: calc(var(--left) * 1%); /* posisi nilai property css */
     height: 30%;
     bottom: 0;
+}
+
+/* menu.html */
+.a1{
+    position: relative;
+    color: transparent;
+    left: 75px;
+    top: 50px;
+}
+
+.a2{
+    position: relative;
+    color: transparent;
+    left: 0px;
+    top: 0px;
+}
+
+.menu{
+    position: absolute;
+    width: 480px;
+    height: 240px;
+    /* border: 1px solid black; */
+    background-image: url(/img/BGMenu.png);
+    margin: auto;
 }

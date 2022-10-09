@@ -4,12 +4,14 @@ import {
     setCustomProperty
 } from "./updateCustomProperty.js"
 
-const wolfElem = document.querySelector("[data-wolf]")
+//var
+const wolfElem = document.querySelector("[data-wolf]") //manggil
 const JUMP_SPEED = 0.45
 const GRAVITY = 0.0015
 const WOLF_FRAME_COUNT = 6
 const FRAME_TIME = 90
 
+//var
 let isJumping
 let wolfFrame
 let currentFrameTime
@@ -37,6 +39,7 @@ export function setWolfLose(){
     wolfElem.src = 'img/wolf-mati.png'
 }
 
+//biar bisa ber animasi (mirip animation sprite css)
 function handleRun(delta, speedScale){
     if(isJumping){
         wolfElem.src = 'img/wolf-run-4.png'

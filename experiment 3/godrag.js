@@ -4,7 +4,10 @@ import {
     setCustomProperty
 } from "./updateCustomProperty.js"
 
-const SPEED = 0.05
+//godrag = obstacles
+
+//var
+const SPEED = 0.05 //kecepatan godrag
 const GODRAG_INTERVAL_MIN = 700
 const GODRAG_INTERVAL_MAX = 2000
 const worldElem = document.querySelector("[data-world]")

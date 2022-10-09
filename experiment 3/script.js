@@ -2,6 +2,7 @@ import { setupGround, updateGround } from './ground.js'
 import { setupWolf, updateWolf, getWolfRect, setWolfLose } from './wolf.js'
 import { setupGodrag, updateGodrag, getGodragRects } from './godrag.js'
 
+//variabel
 const WORLD_WIDTH = 100
 const WORLD_HEIGHT = 30
 const SPEED_SCALE_INCREASE = 0.00001
@@ -12,13 +13,17 @@ const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]")
 
 setPixelToWorldScale()
+// addeventlistener untuk bisa mengendalikan
 window.addEventListener("resize", setPixelToWorldScale)
 document.addEventListener("keydown", handleStart, { once: true})
 
+//var
 let lastTime
 let speedScale
 let score
 // let highScore
+
+//timer
 function update(time){
     if(lastTime == null){
         lastTime = time
@@ -43,7 +48,7 @@ function checkLose(){
     const wolfRect = getWolfRect()
     return getGodragRects().some(rect => isCollision(rect, wolfRect))
 }
-
+ 
 function isCollision(rect1, rect2){
     return (
         rect1.left < rect2.right &&
@@ -76,7 +81,7 @@ function updateScore(delta){
 //     //   }
 // }
 
-
+//start
 function handleStart(){
     lastTime = null
     speedScale = 1
@@ -97,6 +102,7 @@ function handleStart(){
     window.requestAnimationFrame(update)
 }
 
+// finis/lose
 function handleLose(){
   setWolfLose()
   setTimeout(() => {

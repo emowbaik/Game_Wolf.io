@@ -4,9 +4,11 @@ import {
     setCustomProperty
 } from "./updateCustomProperty.js"
 
-const SPEED = 0.05
+//var
+const SPEED = 0.05 //kecepatan ground
 const groundElems = document.querySelectorAll("[data-ground]")
 
+// let gameSpeed
 export function setupGround(){
     setCustomProperty(groundElems[0], "--left", 0)
     setCustomProperty(groundElems[1], "--left", 300)
