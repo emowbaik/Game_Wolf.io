@@ -71,6 +71,7 @@ body{
 /* menu.html */
 /* .a1{
     position: absolute;
+    text-decoration: none;
     color: transparent;
     right: 15vmin;
     top: 18vmin;
@@ -96,20 +97,46 @@ body{
 }
 
 .play{
-    position: absolute;
-    padding: 10em 10em;
-    margin-left: 60em;
-    margin-top: 20em;
-    /* height: 114  px; */
+/*     position: absolute;
+    color: transparent; */
+    /* padding: 10em 10em; */
+    /* margin-left: 31em; */
+    /* margin-top: 22em; */
+    /* height: 114px; */
     /* width: 141px; */
-    /* width: 20%; */
-    /* height: 25%; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-    /* right: 90em; */
-    /* top: 70vmin; */
-    /* border-radius: 0px;     */
+    /* width: 20%;
+    height: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    right: 34em;
+    top: 27em;
+    border-radius: 0px;    
+    background-image: url(/img/buttonPlay.png); */
     /* background-image: url(/img/buttonPlay.png); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 34em; */
+    /* margin-left: 2.5em; */
+    background-image: url(/img/buttonPlay.png);
+    height: 100%;
+    width: 100%;
+    background-position: 39em 30em;
+    background-repeat: no-repeat;
+    
+}
+
+.play a {
+    /* padding: 0.7em 3em; */
+    /* background-color: rgb(21, 49, 204); */
+    text-decoration: none;
+    color: white;
+    border-radius: 2em;
+    margin-top: 28em;
+    /* visibility: hidden; */
+    opacity: 10%;
+    
+
 }
 
 #about{
