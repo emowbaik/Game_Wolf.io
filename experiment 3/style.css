@@ -69,12 +69,12 @@ body{
 }
 
 /* menu.html */
-.a1{
+/* .a1{
     position: absolute;
     color: transparent;
     right: 15vmin;
     top: 18vmin;
-}
+} */
 
 .a2{
     position: absolute;
@@ -95,18 +95,21 @@ body{
     margin: auto;
 }
 
-#play{
+.play{
     position: absolute;
-    /* height: 114px; */
+    padding: 10em 10em;
+    margin-left: 60em;
+    margin-top: 20em;
+    /* height: 114  px; */
     /* width: 141px; */
-    width: 20%;
-    height: 25%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    right: 90vmin;
-    top: 70vmin;
-    border-radius: 0px;    
-    background-image: url(/img/buttonPlay.png);
+    /* width: 20%; */
+    /* height: 25%; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* right: 90em; */
+    /* top: 70vmin; */
+    /* border-radius: 0px;     */
+    /* background-image: url(/img/buttonPlay.png); */
 }
 
 #about{
@@ -123,19 +126,22 @@ body{
 }
 
 .about {
-    background-color: gray;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    /* background-color: gray; */
     padding: 0.5em 0.5em;
-    border-radius: 10em;
+    /* border-radius: 10em; */
     text-decoration: none;
-    color: black;
-    transition: 0.7s;
+    /* color: black; */
+    /* transition: 0.7s; */
 }
 
-.about:hover {
+/* .about:hover {
     color: white;
     background-color: rgb(53, 52, 52);
     transition: 0.7s;
-}
+} */
 
 .abt {
     margin-left: 2em;
