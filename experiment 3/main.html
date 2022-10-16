@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: grid;
+            place-items: center;
+            height: 90vh;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 12px 0;
+            border: none;
+            background-color: blueviolet;
+            padding: 0.7em 1em;
+            border-radius: 0.5em;
+        }
+
+        .card {
+            display: none;
+            padding: 64px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn" onclick="mulai()">Tampil</button>
+        <div class="card" id="card">
+            <div class="card-content">
+                <h3 class="game-title">
+                    Judul game
+                </h3>
+                <button class="btn" onclick="hilang()"><a href="#">Main</a></button>
+                <button class="btn"><a href="#">Level</a></button>
+                <button class="btn"><a href="#">Skin</a></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let card = document.getElementById("card")
+        const mulai = () => {
+            let button = document.getElementById("btn")
+            if (card.style.display == "none") {
+                card.style.display = "block"
+            } else {
+                card.style.display = "block"
+                btn.style.display = "none"
+            }
+        }
+
+        const hilang = () => {
+            if (card.style.display == "block") {
+                card.style.display = "none"
+            } else {
+                card.style.display = "block"
+            }
+        }
+    </script>
+</body>
+
+</html>

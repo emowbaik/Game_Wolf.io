@@ -39,6 +39,7 @@ export function updateGodrag(delta, speedScale){
     nextGodragTime -= delta
 }
 
+//agar kena hit
 export function getGodragRects(){
     return [...document.querySelectorAll("[data-godrag]")].map(godrag => {
         return godrag.getBoundingClientRect()
