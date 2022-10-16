@@ -6,9 +6,8 @@ import {
 
 //var
 const SPEED = 0.05 //kecepatan ground
-const groundElems = document.querySelectorAll("[data-ground]")
+const groundElems = document.querySelectorAll("[data-ground]") //manggil dari html
 
-// let gameSpeed
 export function setupGround(){
     setCustomProperty(groundElems[0], "--left", 0)
     setCustomProperty(groundElems[1], "--left", 300)

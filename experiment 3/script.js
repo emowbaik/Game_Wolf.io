@@ -2,11 +2,12 @@ import { setupGround, updateGround } from './ground.js'
 import { setupWolf, updateWolf, getWolfRect, setWolfLose } from './wolf.js'
 import { setupGodrag, updateGodrag, getGodragRects } from './godrag.js'
 
-//variabel
+//variabel untuk mengatur tempatnya
 const WORLD_WIDTH = 100
 const WORLD_HEIGHT = 30
 const SPEED_SCALE_INCREASE = 0.00001
 
+//var untuk manggil dari html
 const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
 // const highScoreElem = document.querySelector("[data-highScore]")
@@ -17,13 +18,13 @@ setPixelToWorldScale()
 window.addEventListener("resize", setPixelToWorldScale)
 document.addEventListener("keydown", handleStart, { once: true})
 
-//var
+//var untuk update loop
 let lastTime
 let speedScale
 let score
 // let highScore
 
-//timer
+//update timer
 function update(time){
     if(lastTime == null){
         lastTime = time
@@ -48,7 +49,8 @@ function checkLose(){
     const wolfRect = getWolfRect()
     return getGodragRects().some(rect => isCollision(rect, wolfRect))
 }
- 
+
+//function jika tabrak godrag
 function isCollision(rect1, rect2){
     return (
         rect1.left < rect2.right &&
@@ -58,10 +60,12 @@ function isCollision(rect1, rect2){
         )
 }
 
+//untuk update kecepatan skala
 function updateSpeedScale(delta){
     speedScale += delta * SPEED_SCALE_INCREASE
 }
 
+//untuk update/memperbarui score
 function updateScore(delta){
     score += delta * 0.01
     scoreElem.textContent = Math.floor(score)
@@ -81,7 +85,6 @@ function updateScore(delta){
 //     //   }
 // }
 
-//start
 function handleStart(){
     lastTime = null
     speedScale = 1
@@ -102,7 +105,6 @@ function handleStart(){
     window.requestAnimationFrame(update)
 }
 
-// finis/lose
 function handleLose(){
   setWolfLose()
   setTimeout(() => {
@@ -111,6 +113,7 @@ function handleLose(){
   }, 100)
 }
 
+//mengatue pixel untuk skala tempat/board
 function setPixelToWorldScale(){
     let worldToPixelScale
     if (window.innerWidth / window.innerHeight < WORLD_WIDTH / WORLD_HEIGHT) {
@@ -122,5 +125,3 @@ function setPixelToWorldScale(){
     worldElem.style.width = `${WORLD_WIDTH * worldToPixelScale}px`
     worldElem.style.height = `${WORLD_HEIGHT * worldToPixelScale}px`
 }
-
-//p

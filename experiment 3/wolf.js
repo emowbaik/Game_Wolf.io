@@ -5,17 +5,18 @@ import {
 } from "./updateCustomProperty.js"
 
 //var
-const wolfElem = document.querySelector("[data-wolf]") //manggil
-const JUMP_SPEED = 0.45
-const GRAVITY = 0.0015
-const WOLF_FRAME_COUNT = 6
-const FRAME_TIME = 90
+const wolfElem = document.querySelector("[data-wolf]") //manggil dari html
+const JUMP_SPEED = 0.45 //kecepatan lompat
+const GRAVITY = 0.0015 //berat badan
+const WOLF_FRAME_COUNT = 6 //jumlah frame
+const FRAME_TIME = 90 //kecepatan pergantian frame berikutnya
 
 //var
 let isJumping
 let wolfFrame
 let currentFrameTime
 let yVelocity
+
 export function setupWolf(){
     isJumping = false
     wolfFrame = 0
@@ -35,6 +36,7 @@ export function getWolfRect(){
     return wolfElem.getBoundingClientRect()
 }
 
+//frame wolf jika MATI
 export function setWolfLose(){
     wolfElem.src = 'img/wolf-mati.png'
 }
@@ -53,6 +55,7 @@ function handleRun(delta, speedScale){
     currentFrameTime += delta * speedScale
 }
 
+//mengatur lompat
 function handleJump(delta){
     if(!isJumping) return
 
@@ -66,6 +69,7 @@ function handleJump(delta){
     yVelocity -= GRAVITY * delta
 }
 
+//tombol untuk lompat
 function onJump(e){
     if (e.code !== "Space" || isJumping) return
 

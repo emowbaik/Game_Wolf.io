@@ -8,10 +8,11 @@ import {
 
 //var
 const SPEED = 0.05 //kecepatan godrag
-const GODRAG_INTERVAL_MIN = 700
-const GODRAG_INTERVAL_MAX = 2000
-const worldElem = document.querySelector("[data-world]")
+const GODRAG_INTERVAL_MIN = 700 //mengatur min jarak obstacle dengan yang lain
+const GODRAG_INTERVAL_MAX = 2000 //mengatur max jarak obstacle dengan yang lain
+const worldElem = document.querySelector("[data-world]") //manggil dari html
 
+//waktu muncul obstacle berikutnya
 let nextGodragTime
 export function setupGodrag(){
     nextGodragTime = GODRAG_INTERVAL_MIN
@@ -20,6 +21,7 @@ export function setupGodrag(){
     })
 }
 
+//update obstacle
 export function updateGodrag(delta, speedScale){
     document.querySelectorAll("[data-godrag]").forEach(godrag => {
         incrementCustomProperty(godrag, "--left", delta * speedScale * SPEED * -1)
@@ -43,6 +45,7 @@ export function getGodragRects(){
     })
 }
 
+//menampilkan obstacle
 function createGodrag(){
     const godrag = document.createElement("img")
     godrag.dataset.godrag = true
@@ -52,6 +55,7 @@ function createGodrag(){
     worldElem.append(godrag)
 }
 
+//random
 function randomNumberBetween(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
