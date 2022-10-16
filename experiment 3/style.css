@@ -207,13 +207,13 @@ body {
   margin-top: 2em;
 }
 
-.display {
+/* .display {
   position: relative;
   width: 50em;
   height: 20em;
-  /* display: flex; */
-  /* padding: 10em 20em; */
+  display: flex;
+  padding: 10em 20em;
   border: 1em wheat solid;
   border-radius: 1em;
   background-color: gray;
-}
+} */
