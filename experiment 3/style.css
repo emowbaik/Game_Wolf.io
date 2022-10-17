@@ -19,10 +19,10 @@ body {
 }
 
 .score {
-  /* position: absolute; */
+  position: absolute;
   font-size: 3vmin;
-  /* right: 1vmin;
-    top: 1vmin; */
+  right: 110vmin;
+    top: 10vmin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +181,7 @@ body {
   /* right: 10px; */
   /* top: -100px; */
   border-radius: 0px;
-  background-image: url(/img/about.png);
+  /* background-image: url(/img/about.png); */
 }
 
 .about {

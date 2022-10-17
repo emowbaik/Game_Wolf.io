@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolf.io</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+            place-items: center;
+            position: absolute;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            bottom: 0;
+        }
+
+        .bg {
+            place-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .btn {
+            width: 100%;
+            margin: 12px 0;
+            border: none;
+            background-color: blueviolet;
+            padding: 0.7em 1em;
+            border-radius: 0.5em;
+        }
+
+        .card {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-content" id="container-content">
+            <img class="bg" src="img/BGMenu.png">
+            <div class="about" id="about" onclick="about()">
+                <svg xmlns="http://www.w3.org/2000/svg" color="black" width="35" height="35" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                </svg>
+            </a></div>
+            <div class="ver">Version 4.0</div>
+            <div class="dev">
+                <div class="logo"></div>
+                Dev by Alam
+            </div>
+            <div class="play" id="btn" onclick="mulai()"></div>
+        </div>
+        <div class="contentabt">
+            uhasdablfnafnadsfnasfnaflaskfnak qdn
+        </div>
+        <div class="card" id="card">
+            <div class="card-content">
+                <div class="world" data-world>
+                    <div class="score" data-score>0</div>
+                    <div class="start-screen" data-start-screen>Press any key for start</div>
+                    <img src="img/Ground.jpeg" class="ground" data-ground>
+                    <img src="img/Ground.jpeg" class="ground" data-ground>
+                    <img src="img/wolfpatung.png" class="wolf" data-wolf>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="script.js" type="module"></script>
+    <script>
+        const mulai = () => {
+            let container = document.getElementById("container-content")
+            if (container.style.display == "none") {
+                container.style.display = "block"
+            } else {
+                container.style.display = "none"
+                card.style.display = "block"
+            }
+        }
+
+        const about = () => {
+            let abt = document.getElementById("about")
+            let container = document.getElementById("container-content")
+            if (abt.style.display == "none") {
+                abt.style.display = "block"
+            } else {
+                abt.style.display = "none"
+                container.style.display = "none"
+                contentabt.style.display = "block"
+            }
+        }
+    </script>
+</body>
+
+</html>

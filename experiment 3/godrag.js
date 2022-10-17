@@ -8,7 +8,7 @@ import {
 
 //var
 const SPEED = 0.05 //kecepatan godrag
-const GODRAG_INTERVAL_MIN = 700 //mengatur min jarak obstacle dengan yang lain
+const GODRAG_INTERVAL_MIN = 750 //mengatur min jarak obstacle dengan yang lain
 const GODRAG_INTERVAL_MAX = 2000 //mengatur max jarak obstacle dengan yang lain
 const worldElem = document.querySelector("[data-world]") //manggil dari html
 
