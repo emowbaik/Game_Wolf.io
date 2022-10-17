@@ -45,6 +45,13 @@
         .card {
             display: none;
         }
+
+        .backtohome {
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            padding: 0.5em 0.5em;
+        }
     </style>
 </head>
 
@@ -65,12 +72,17 @@
             </div>
             <div class="play" id="btn" onclick="mulai()"></div>
         </div>
-        <div class="contentabt">
-            uhasdablfnafnadsfnasfnaflaskfnak qdn
+        <div class="contentabt" id="ctn">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque inventore delectus explicabo sed veniam sunt, vel quisquam animi repudiandae commodi, quasi quos dicta consequatur. Autem quidem cumque unde praesentium dignissimos!
         </div>
         <div class="card" id="card">
             <div class="card-content">
                 <div class="world" data-world>
+                    <div class="backtohome" id="backtohome" onclick="backhome()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                          </svg>
+                    </div>
                     <div class="score" data-score>0</div>
                     <div class="start-screen" data-start-screen>Press any key for start</div>
                     <img src="img/Ground.jpeg" class="ground" data-ground>
@@ -89,6 +101,8 @@
             } else {
                 container.style.display = "none"
                 card.style.display = "block"
+                ctn.style.display = "none"
+                bh.style.display = "block"
             }
         }
 
@@ -98,9 +112,24 @@
             if (abt.style.display == "none") {
                 abt.style.display = "block"
             } else {
-                abt.style.display = "none"
+                abt.style.display = "block"
                 container.style.display = "none"
                 contentabt.style.display = "block"
+                ctn.style.display = "block"
+            }
+        }
+
+        const backhome = () => {
+            let bh = document.getElementById("backtohome")
+            let container = document.getElementById("container-content")
+            if (bh.style.display == "none") {
+                bh.style.display = "block"
+            } else {
+                bh.style.display = "block"
+                container.style.display = "block"
+                card.style.display = "none"
+                ctn.style.display = "block"
+                // contentabt.style.display = "block"
             }
         }
     </script>
