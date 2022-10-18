@@ -143,14 +143,6 @@ body {
   opacity: 0%;
 }
 
-.ver {
-  position: absolute;
-  text-decoration: none;
-  color: rgba(45, 47, 56, 0.671);
-  right: 1em;
-  top: 1em;
-}
-
 .dev {
   position: absolute;
   text-decoration: none;
