@@ -28,13 +28,6 @@ body {
   align-items: center;
 }
 
-/* .highScore{
-    position: absolute;
-    font-size: 3vmin;
-    left: 1vmin;
-    top: 1vmin;
-} */
-
 .start-screen {
   position: absolute;
   font-size: 5vmin;
@@ -71,17 +64,8 @@ body {
 }
 
 /* menu.html */
-/* .a1{
-    position: absolute;
-    text-decoration: none;
-    color: transparent;
-    right: 15vmin;
-    top: 18vmin;
-} */
-
 .a2 {
   position: absolute;
-  /* color: transparent; */
   left: 0px;
   top: 0px;
 }
@@ -92,20 +76,12 @@ body {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  /* bottom: 0; */
-  /* border: 1px solid black; */
   background-image: url(/img/BGMenu.png);
   margin: auto;
 }
 
 .play {
   position: absolute;
-  /* color: transparent; */
-  /* padding: 10em 10em; */
-  /* margin-left: 31em; */
-  /* margin-top: 22em; */
-  /* height: 114px; */
-  /* width: 141px; */
   width: 20%;
   height: 25%;
   background-repeat: no-repeat;
@@ -113,33 +89,17 @@ body {
   right: 34em;
   top: 27em;
   border-radius: 0px;
-  /* background-image: url(/img/buttonPlay.png); */
-  /* background-image: url(/img/buttonPlay.png); */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* margin-top: 34em; */
-  /* margin-left: 2.5em; */
   background-image: url(/img/buttonPlay.png);
-  /* height: 100%; */
-  /* width: 100%; */
-  /* background-position: 10em 10em; */
-  /* background-repeat: no-repeat; */
 }
 
 .play a {
   position: absolute;
-  /* padding: 0.7em 3em; */
-  /* background-color: rgb(21, 49, 204); */
   text-decoration: none;
   color: white;
   border-radius: 2em;
   font-size: 20px;
   right: 4.4em;
   top: 5.4em;
-  /* margin-top: 10em; */
-  /* margin-left: 9em; */
-  /* visibility: hidden; */
   opacity: 0%;
 }
 
@@ -158,7 +118,6 @@ body {
   width: 40px;
   height: 40px;
   right: 5.7em;
-  /* top: 0; */
   bottom: -0.5em;
   background-image: url(/img/Logo\ emow\ transparent.png);
 }
@@ -169,30 +128,16 @@ body {
   width: 35px;
   background-size: cover;
   background-repeat: no-repeat;
-  /* left: 5px; */
-  /* right: 10px; */
-  /* top: -100px; */
   border-radius: 0px;
-  /* background-image: url(/img/about.png); */
 }
 
 .about {
   position: absolute;
   width: 35px;
   height: 35px;
-  /* background-color: gray; */
   padding: 0.5em 0.5em;
-  /* border-radius: 10em; */
   text-decoration: none;
-  /* color: black; */
-  /* transition: 0.7s; */
 }
-
-/* .about:hover {
-    color: white;
-    background-color: rgb(53, 52, 52);
-    transition: 0.7s;
-} */
 
 .abt {
   margin-left: 2em;
