@@ -232,13 +232,33 @@ a {
   font-family: sans-serif;
   text-align: center;
   padding-top: 30px;
-  font-size: 42px;
+  font-size: 50px;
 }
 
 .title h1::after {
   content: "";
   height: 4px;
   width: 230px;
+  background-color: #000;
+  display: block;
+  margin: auto;
+}
+
+
+.titlehow h1 {
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 50px;
+}
+
+.titlehow h1::after {
+  content: "";
+  /* bottom: 10em; */
+  /* top: 10em; */
+  /* right: 50em; */
+  height: 4px;
+  width: 330px;
   background-color: #000;
   display: block;
   margin: auto;
@@ -261,11 +281,9 @@ a {
   line-height: 1.15;
 }
 
-.how {
+.howtoplay {
   /* display: none; */
   position: absolute;
-  /* text-decoration: none; */
-  /* color: rgba(45, 47, 56, 0.671); */
   padding: 0.5em 0.5em;
   right: 0;
   top: 0;
@@ -274,4 +292,14 @@ a {
 .ver {
   font-size: 15px;
   color: #c94f4f;
+}
+
+.how {
+  display: none;
+  background-image: url(/img/BGPagi.png);
+  padding: 5em 5em;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
