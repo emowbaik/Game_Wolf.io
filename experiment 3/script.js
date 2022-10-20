@@ -95,7 +95,7 @@ function handleStart(){
     setupWolf()
     setupGodrag()
 
-    // window.localStorage.setItem('highScore', highScore); 
+    // window.startScreenElem.localStorage.getItem('highScore', highScore); 
     // if (score > highScore) {
     //     highScore = score;
     //     highScoreElem.textContent = "Highscore: " + highScore;
