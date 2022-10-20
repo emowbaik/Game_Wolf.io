@@ -36,10 +36,14 @@
         </div>
         
         <div class="how" id="how">
+            <div class="backtohome3" id="backtohome3" onclick="backhome3()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                </svg></div>
             <div class="titlehow">
                 <h1>How To Play</h1>
             </div>
-            <div class="contentabt">
+            <div class="contentabt" id="htp">
                 <div class="cardAbt" style="font-family: sans-serif;">
                     <p>
                         How to play this game is very easy. You have to avoid obstacles. The trick, by jumping press the space bar. If the wolf is hit by an obstacle then the game will be over.
@@ -47,6 +51,7 @@
                     </div>
                 </div>
         </div>
+
         <div class="imgAbt" id="ctn">
             <div class="backtohome2" id="backtohome2" onclick="backhome2()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
@@ -84,8 +89,12 @@
     </div>
   <script src="script.js" type="module"></script>
     <script>
+
+        alert("don't press any key on the keyboard before being told")
+
         const mulai = () => {
             let bh2 = document.getElementById("backtohome2")
+            let bh3 = document.getElementById("backtohome3")
             let container = document.getElementById("container-content")
             if (container.style.display == "none") {
                 container.style.display = "block"
@@ -93,7 +102,9 @@
                 container.style.display = "none"
                 card.style.display = "block"
                 ctn.style.display = "none"
+                how.style.display = "none"
                 bh2.style.display = "none"
+                bh3.style.display = "none"
             }
         }
         
@@ -101,6 +112,7 @@
             let abt = document.getElementById("about")
             let bh = document.getElementById("backtohome")
             let bh2 = document.getElementById("backtohome2")
+            let bh3 = document.getElementById("backtohome3")
             let container = document.getElementById("container-content")
             if (abt.style.display == "none") {
                 abt.style.display = "block"
@@ -108,11 +120,14 @@
                 container.style.display = "none"
                 ctn.style.display = "block"
                 bh2.style.display = "block"
-                // ver.style.display = "block"
+                bh3.style.display = "none"
+                how.style.display = "none"
             }
         }
 
         const backhome = () => {
+            let bh3 = document.getElementById("backtohome3")
+            let abt = document.getElementById("about")
             let bh = document.getElementById("backtohome")
             let container = document.getElementById("container-content")
             if (bh.style.display == "none") {
@@ -120,18 +135,24 @@
             } else {
                 container.style.display = "block"
                 card.style.display = "none"
+                how.style.display = "none"
+                bh3.style.display = "none"
                 ctn.style.display = "block"
+                abt.style.display = "block"
             }
         }
 
         const backhome2 = () => {
             let abt = document.getElementById("about")
             let bh2 = document.getElementById("backtohome2")
+            let bh3 = document.getElementById("backtohome3")
             let container = document.getElementById("container-content")
             if (bh2.style.display == "none") {
                 bh2.style.display = "block"
             } else {
                 container.style.display = "block"
+                how.style.display = "none"
+                bh3.style.display = "none"
                 card.style.display = "none"
                 ctn.style.display = "none"
             }
@@ -142,6 +163,7 @@
             let abt = document.getElementById("about")
             let bh = document.getElementById("backtohome")
             let bh2 = document.getElementById("backtohome2")
+            let bh3 = document.getElementById("backtohome3")
             let container = document.getElementById("container-content")
             if (htp.style.display == "none") {
                 htp.style.display = "block"
@@ -151,6 +173,24 @@
                 container.style.display = "none"
                 ctn.style.display = "none"
                 bh2.style.display = "none"
+                bh3.style.display = "block"
+            }
+        }
+
+        const backhome3 = () => {
+            let abt = document.getElementById("about")
+            let htp1 = document.getElementById("how")
+            let bh3 = document.getElementById("backtohome3")
+            let bh2 = document.getElementById("backtohome2")
+            let container = document.getElementById("container-content")
+            if (bh3.style.display == "none") {
+                bh3.style.display = "block"
+            } else {
+                container.style.display = "block"
+                how.style.display = "none"
+                card.style.display = "none"
+                abt.style.display = "block"
+                ctn.style.display = "none"
             }
         }
     </script>
